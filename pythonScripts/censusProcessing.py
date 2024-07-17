@@ -1,8 +1,5 @@
-# %%
 # This is a standalone file to process a Statistics Canada census file for machine learning
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 import time
 
 # Since we learned what processing needs to be done in the previous file,
@@ -64,7 +61,7 @@ start = time.time()
 print('Processing census data...')
 
 years = [2016, 2021]
-locationList = ['PEI', 'NS', 'NB', 'NL', 'QC', 'ON', 'MB', 'SK', 'AB', 'BC', 'YT', 'NT', 'NU']
+locationList = ['PEI', 'NS', 'NB', 'NL', 'QC', 'ON', 'MB', 'SK', 'AB', 'BC', 'YK', 'NT', 'NU']
 
 for location in locationList:
     for year in years:

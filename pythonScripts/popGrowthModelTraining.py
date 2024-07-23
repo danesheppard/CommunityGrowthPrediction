@@ -162,12 +162,12 @@ class BubbleChart:
 
 
 # Load the data
+print('Loading data for training and analysis...')
 
 dataSetName = 'Canada'
 census2016 = pd.read_csv(f'../processedData/processed_{dataSetName}_2016.csv')
 census2021 = pd.read_csv(f'../processedData/processed_{dataSetName}_2021.csv')
 
-# %%
 # We only need the GEO_NAME for cross referencing, the population count for training,
 # and the province for handling duplicate community names
 trimmed2021 = census2021[['GEO_NAME', 'Province', 'Population, 2021']]
@@ -331,7 +331,7 @@ def modelAnalysis(yVal, yPred, plotID):
         subsetR2 = r2_score(xAx, yAx)
         subsetMean = round(xAx.mean())
         subsetRmsePercentage = round(subsetRmse / subsetMean * 100, 2)
-        textString = f'RMSE: {subsetRmse}\nR^2: {subsetR2}\nMean: {subsetMean}\nRMSE as a percentage of the mean: {subsetRmsePercentage}%'
+        textString = f'\nRMSE: {subsetRmse}\nR^2: {subsetR2}\nMean: {subsetMean}\nRMSE as a percentage of the mean: {subsetRmsePercentage}%\n'
         ax.text(0.05, 
                 0.95, 
                 textString, 
@@ -368,10 +368,10 @@ def modelAnalysis(yVal, yPred, plotID):
     indices = np.argsort(importances)[::-1]
 
     # We'll print the top 10 features
+    print('\nThe 10 most important features are:\n')
     for i in range(10):
         print(f'{featuresUnified[indices[i]]}: {importances[indices[i]]}')
 
-    plt.figure(figsize=(10, 5))
     plt.bar(range(X.shape[1]), importances[indices])
     plt.title(f'Distribution of Feature Importances, \n{plotID}, {dataSetName}')
     plt.ylabel('Importance')
@@ -380,7 +380,6 @@ def modelAnalysis(yVal, yPred, plotID):
 
     # We'll plot the top features, using the feature names as labels 
     # and the importances as the areas
-    bubFig = plt.figure(figsize=(10, 10))
     featureCount = 10
     topFeatures = featuresUnified[indices[:featureCount]]
     # topFeatures = [ 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
@@ -403,7 +402,7 @@ def modelAnalysis(yVal, yPred, plotID):
 
     bubbles = BubbleChart(area = topImportances, bubble_spacing=0.01)
     bubbles.collapse()
-    fig, ax = plt.subplots(subplot_kw=dict(aspect="equal"))
+    bubFig, ax = plt.subplots(subplot_kw=dict(aspect="equal"))
     bubbles.plot(
         ax, wrappedFeatures, colors )
     ax.axis("off")
@@ -437,22 +436,23 @@ def hyperparameterTuning(model, features, targets):
     The best parameters found by the grid search
     '''
     paramGrid = {
-        'regressor__n_estimators': [25, 50, 100, 200, 300, 400, 500],
+        # 'regressor__n_estimators': [25, 50, 100, 200, 300, 400, 500],
+        'regressor__n_estimators': [2, 5, 10],
         'regressor__min_samples_leaf': [1, 2, 4, 8, 16]
     }
 
     # We'll use the default 5-fold cross validation
     tuningStart = time.time()
-    print('Starting hyperparameter tuning...')
-    gridSearch = GridSearchCV(model, paramGrid)
+    print('\nStarting hyperparameter tuning...\n')
+    gridSearch = GridSearchCV(estimator=model, param_grid = paramGrid, n_jobs = 8, cv = 5, verbose = 2)
     gridSearch.fit(features, targets)
 
     bestParams = gridSearch.best_params_
     bestScore = gridSearch.best_score_
     tuningEnd = time.time()
-    print(f'Hyperparameter tuning complete. Time taken: {tuningEnd - tuningStart} seconds')
+    print(f'\nHyperparameter tuning complete. Time taken: {tuningEnd - tuningStart} seconds\n')
     print(f'Best parameters: {bestParams}')
-    print(f'Best score: {bestScore}')
+    print(f'Best score: {bestScore}\n')
 
     bestTrees = bestParams['regressor__n_estimators']
     bestLeafSamples = bestParams['regressor__min_samples_leaf']

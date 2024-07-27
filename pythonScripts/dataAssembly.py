@@ -32,7 +32,7 @@ for year in years:
     # Let's add a column for the province so we can deal with duplicated community names
 
     # Write the data to a file
-    allData.to_csv(f'../processedData/processed_Canada_{year}.csv', index=True)
+    allData.to_csv(f'../processedData/processed_Canada_{year}.csv', index=False)
 
 
 end = time.time()

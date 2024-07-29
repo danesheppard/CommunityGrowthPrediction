@@ -262,8 +262,8 @@ def setupAndTraining(features, populationTargets, numTrees = 100, minSamplesLeaf
 
     return model, XTrain, XVal, yTrain, yVal, yPred, X, y
 
-
-model, XTrain, XVal, yTrain, yVal, yPred, X, y = setupAndTraining(trimmed2016, trimmed2021, 200)
+print('Beginning model training for full dataset...')
+fullModel, XTrainFull, XValFull, yTrainFull, yValFull, yPredFull, XFull, yFull = setupAndTraining(trimmed2016, trimmed2021, 200)
 print('Model output ready for analysis.')
 
 # Let's plot the predicted vs actual values
@@ -272,14 +272,17 @@ print('Model output ready for analysis.')
 # This will be set up as a function so that we can reuse it later
 
 
-def modelAnalysis(yVal, yPred, plotID):
+def modelAnalysis(model, yVal, yPred, yTrain, X, plotID):
     '''
     This function will take the actual and predicted values from our population
     prediction model, and plot the entire dataset, and subsets for large and small communities.
 
     Args:
+    model: The trained model
     yVal: The actual values
     yPred: The predicted values
+    yTrain: The training values
+    X: The X values used for training this dataset.
     plotID: An identifier that is added to the file name when saving
     '''
 
@@ -382,7 +385,6 @@ def modelAnalysis(yVal, yPred, plotID):
     # and the importances as the areas
     featureCount = 10
     topFeatures = featuresUnified[indices[:featureCount]]
-    # topFeatures = [ 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
     topImportances = importances[indices[:featureCount]]
     colors = []
 
@@ -415,7 +417,7 @@ def modelAnalysis(yVal, yPred, plotID):
 
 
 # We'll use our function to run the first analysis
-modelAnalysis(yVal, yPred, 'census_only_no_tuning')
+modelAnalysis(fullModel, yValFull, yPredFull, yTrainFull, XFull, 'census_only_no_tuning')
 
 # Now let's see if we can do some hyperparameter tuning to get
 # better prediction capabilities. We'll use a grid search to find the best
@@ -436,15 +438,15 @@ def hyperparameterTuning(model, features, targets):
     The best parameters found by the grid search
     '''
     paramGrid = {
-        # 'regressor__n_estimators': [25, 50, 100, 200, 300, 400, 500],
-        'regressor__n_estimators': [2, 5, 10],
+        'regressor__n_estimators': [25, 50, 100, 200, 300, 400, 500],
+        # 'regressor__n_estimators': [2, 5, 10],
         'regressor__min_samples_leaf': [1, 2, 4, 8, 16]
     }
 
     # We'll use the default 5-fold cross validation
     tuningStart = time.time()
     print('\nStarting hyperparameter tuning...\n')
-    gridSearch = GridSearchCV(estimator=model, param_grid = paramGrid, n_jobs = 8, cv = 5, verbose = 2)
+    gridSearch = GridSearchCV(estimator=model, param_grid = paramGrid, n_jobs = 8, cv = 5, verbose = 1)
     gridSearch.fit(features, targets)
 
     bestParams = gridSearch.best_params_
@@ -460,20 +462,26 @@ def hyperparameterTuning(model, features, targets):
 
 
 # Let's retrain the model with the best parameters
-bestTrees, bestLeafSamples = hyperparameterTuning(model, X, y)
+bestTrees, bestLeafSamples = hyperparameterTuning(fullModel, XFull, yFull)
+print('Retraining full dataset model with best parameters...')
 bestModel, XTrainBest, XValBest, yTrainBest, yValBest, yPredBest, XBest, yBest = setupAndTraining(trimmed2016, trimmed2021, bestTrees, bestLeafSamples)
 
 # We'll also run the model analysis again
-modelAnalysis(yValBest, yPredBest, 'hyperparams_tuned')
+modelAnalysis(bestModel, yValBest, yPredBest, yTrainFull, XBest, 'hyperparams_tuned')
 
 # Let's save the model trained on the full Canada dataset using joblib
+print('Exporting tuned model for full dataset...')
 dump(bestModel, f'scriptOutputs/{dataSetName}_full_dataset_model.joblib')
 
 # As a final experiment in training, let's see how the model performs
-# when we repeat this process using only communities with populations below 100k
-# This will allow us to see if the model performs better when it is not dealing with
-# the extreme outliers (eg. Toronto, Vancouver, Montreal, etc.)
+# when we repeat this process using only communities with populations below 100k, and again with
+# populations below 30k.
 
+# This will allow us to see if the model performs better when it is not dealing with
+# the extreme outliers (eg. Toronto, Vancouver, Montreal, etc.), and if there are general
+# performace trends that can be observed when dealing with smaller communities
+
+########################## Below 100k #########################
 # First we will filter the original datasets
 # We need to be careful when filtering because a community may have crossed the
 # population threshold between 2016 and 2021. Let's filter the 2021 data first and
@@ -483,16 +491,38 @@ below100k2021 = trimmed2021[trimmed2021['Population, 2021'] < 100000]
 below100k2016 = trimmed2016.iloc[below100k2021.index]
 
 # Print the length of both
-print(f'2016 dataset length: {len(below100k2016)}')
-print(f'2021 dataset length: {len(below100k2021)}')
+print(f'Below 100k 2016 dataset length: {len(below100k2016)}')
+print(f'Below 100k 2021 dataset length: {len(below100k2021)}')
 
 # Now we can train the model using the below 100k datasets
 # We will train with function defaults, tune the hyperparameters again for this dataset, and then train again
 # before we analyze the results
+print('Training model for populations below 100k...')
 below100kModel, XTrain100k, XVal100k, yTrain100k, yVal100k, yPred100k, X100k, y100k = setupAndTraining(below100k2016, below100k2021, bestTrees, bestLeafSamples)
 best100kTrees, best100kLeafSamples = hyperparameterTuning(below100kModel, X100k, y100k)
+print('Retraining model with best parameters...')
 best100kModel, XTrain100kBest, XVal100kBest, yTrain100kBest, yVal100kBest, yPred100kBest, X100kBest, y100kBest = setupAndTraining(below100k2016, below100k2021, best100kTrees, best100kLeafSamples)
-modelAnalysis(yVal100kBest, yPred100kBest, 'below_100k_tuned')
+modelAnalysis(best100kModel, yVal100kBest, yPred100kBest, yTrain100kBest, X100kBest, 'below_100k_tuned')
 
 # Let's save this model as well, so we can compare them later
+print('Exporting tuned model for below 100k dataset...')
 dump(best100kModel, f'scriptOutputs/{dataSetName}_below_100k_model.joblib')
+
+########################## Below 30k #########################
+below30k2021 = trimmed2021[trimmed2021['Population, 2021'] < 30000]
+below30k2016 = trimmed2016.iloc[below30k2021.index]
+
+print(f'Below 30k 2016 dataset length: {len(below30k2016)}')
+print(f'Below 30k 2021 dataset length: {len(below30k2021)}')
+
+# Last set of training, tuning, and analysis
+print('Training model for populations below 30k...')
+below30kModel, XTrain30k, XVal30k, yTrain30k, yVal30k, yPred30k, X30k, y30k = setupAndTraining(below30k2016, below30k2021, bestTrees, bestLeafSamples)
+best30kTrees, best30kLeafSamples = hyperparameterTuning(below30kModel, X30k, y30k)
+print('Retraining model with best parameters...')
+best30kModel, XTrain30kBest, XVal30kBest, yTrain30kBest, yVal30kBest, yPred30kBest, X30kBest, y30kBest = setupAndTraining(below30k2016, below30k2021, best30kTrees, best30kLeafSamples)
+modelAnalysis(best30kModel, yVal30kBest, yPred30kBest, yTrain30kBest, X30kBest, 'below_30k_tuned')
+
+# Final save
+print('Exporting tuned model for below 30k dataset...')
+dump(best30kModel, f'scriptOutputs/{dataSetName}_below_30k_model.joblib')

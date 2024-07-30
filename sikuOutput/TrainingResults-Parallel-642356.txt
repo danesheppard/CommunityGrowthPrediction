@@ -1,0 +1,248 @@
+created virtual environment CPython3.11.5.final.0-64 in 156ms
+  creator CPython3Posix(dest=/localscratch/an-dsheppard.642356.0/env, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/an-dsheppard/.local/share/virtualenv)
+    added seed packages: pip==24.1.2, setuptools==70.1.1, wheel==0.43.0
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo2023/x86-64-v4, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo2023/x86-64-v3, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo2023/generic, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
+Requirement already satisfied: pip in /localscratch/an-dsheppard.642356.0/env/lib/python3.11/site-packages (24.1.2)
+Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo2023/x86-64-v4, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo2023/x86-64-v3, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo2023/generic, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo2023/generic/numpy-1.26.4+computecanada-cp311-cp311-linux_x86_64.whl
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/dask-2024.5.1+computecanada-py3-none-any.whl
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo2023/x86-64-v3/pandas-2.2.1+computecanada-cp311-cp311-linux_x86_64.whl
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo2023/x86-64-v3/matplotlib-3.9.0+computecanada-cp311-cp311-linux_x86_64.whl
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/joblib-1.4.2+computecanada-py3-none-any.whl
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo2023/generic/scikit_learn-1.5.0+computecanada-cp311-cp311-linux_x86_64.whl
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/click-8.1.7+computecanada-py3-none-any.whl (from dask)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/cloudpickle-3.0.0+computecanada-py3-none-any.whl (from dask)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/fsspec-2024.6.1+computecanada-py3-none-any.whl (from dask)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/packaging-24.1+computecanada-py3-none-any.whl (from dask)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/partd-1.4.2+computecanada-py3-none-any.whl (from dask)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo2023/x86-64-v3/PyYAML-6.0.1+computecanada-cp311-cp311-linux_x86_64.whl (from dask)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/toolz-0.12.1+computecanada-py3-none-any.whl (from dask)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/importlib_metadata-7.0.1+computecanada-py3-none-any.whl (from dask)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/python_dateutil-2.9.0.post0+computecanada-py2.py3-none-any.whl (from pandas)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/pytz-2024.1+computecanada-py2.py3-none-any.whl (from pandas)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/tzdata-2024.1+computecanada-py2.py3-none-any.whl (from pandas)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo2023/generic/contourpy-1.2.1+computecanada-cp311-cp311-linux_x86_64.whl (from matplotlib)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/cycler-0.12.1+computecanada-py3-none-any.whl (from matplotlib)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/fonttools-4.53.0+computecanada-cp311-cp311-linux_x86_64.whl (from matplotlib)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo2023/x86-64-v3/kiwisolver-1.4.5+computecanada-cp311-cp311-linux_x86_64.whl (from matplotlib)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo2023/x86-64-v3/pillow-10.3.0+computecanada-cp311-cp311-linux_x86_64.whl (from matplotlib)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/pyparsing-3.1.2+computecanada-py3-none-any.whl (from matplotlib)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo2023/generic/scipy-1.13.1+computecanada-cp311-cp311-linux_x86_64.whl (from scikit-learn)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/threadpoolctl-3.5.0+computecanada-py3-none-any.whl (from scikit-learn)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/zipp-3.17.0+computecanada-py3-none-any.whl (from importlib-metadata>=4.13.0->dask)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/locket-1.0.0+computecanada-py2.py3-none-any.whl (from partd>=1.2.0->dask)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/six-1.16.0+computecanada-py2.py3-none-any.whl (from python-dateutil>=2.8.2->pandas)
+Installing collected packages: pytz, zipp, tzdata, toolz, threadpoolctl, six, pyyaml, pyparsing, pillow, packaging, numpy, locket, kiwisolver, joblib, fsspec, fonttools, cycler, cloudpickle, click, scipy, python-dateutil, partd, importlib-metadata, contourpy, scikit-learn, pandas, matplotlib, dask
+Successfully installed click-8.1.7+computecanada cloudpickle-3.0.0+computecanada contourpy-1.2.1+computecanada cycler-0.12.1+computecanada dask-2024.5.1+computecanada fonttools-4.53.0+computecanada fsspec-2024.6.1+computecanada importlib-metadata-7.0.1+computecanada joblib-1.4.2+computecanada kiwisolver-1.4.5+computecanada locket-1.0.0+computecanada matplotlib-3.9.0+computecanada numpy-1.26.4+computecanada packaging-24.1+computecanada pandas-2.2.1+computecanada partd-1.4.2+computecanada pillow-10.3.0+computecanada pyparsing-3.1.2+computecanada python-dateutil-2.9.0.post0+computecanada pytz-2024.1+computecanada pyyaml-6.0.1+computecanada scikit-learn-1.5.0+computecanada scipy-1.13.1+computecanada six-1.16.0+computecanada threadpoolctl-3.5.0+computecanada toolz-0.12.1+computecanada tzdata-2024.1+computecanada zipp-3.17.0+computecanada
+Processing census data...
+Processed PEI_2016.csv and saved as processed_PEI_2016.csv
+Processed PEI_2021.csv and saved as processed_PEI_2021.csv
+Processed NS_2016.csv and saved as processed_NS_2016.csv
+Processed NS_2021.csv and saved as processed_NS_2021.csv
+Processed NB_2016.csv and saved as processed_NB_2016.csv
+Processed NB_2021.csv and saved as processed_NB_2021.csv
+Processed NL_2016.csv and saved as processed_NL_2016.csv
+Processed NL_2021.csv and saved as processed_NL_2021.csv
+Processed QC_2016.csv and saved as processed_QC_2016.csv
+Processed QC_2021.csv and saved as processed_QC_2021.csv
+Processed ON_2016.csv and saved as processed_ON_2016.csv
+Processed ON_2021.csv and saved as processed_ON_2021.csv
+Processed MB_2016.csv and saved as processed_MB_2016.csv
+Processed MB_2021.csv and saved as processed_MB_2021.csv
+Processed SK_2016.csv and saved as processed_SK_2016.csv
+Processed SK_2021.csv and saved as processed_SK_2021.csv
+Processed AB_2016.csv and saved as processed_AB_2016.csv
+Processed AB_2021.csv and saved as processed_AB_2021.csv
+Processed BC_2016.csv and saved as processed_BC_2016.csv
+Processed BC_2021.csv and saved as processed_BC_2021.csv
+Processed YK_2016.csv and saved as processed_YK_2016.csv
+Processed YK_2021.csv and saved as processed_YK_2021.csv
+Processed NT_2016.csv and saved as processed_NT_2016.csv
+Processed NT_2021.csv and saved as processed_NT_2021.csv
+Processed NU_2016.csv and saved as processed_NU_2016.csv
+Processed NU_2021.csv and saved as processed_NU_2021.csv
+Processing complete. Time taken: 169.01522397994995 seconds
+Reading in data for PEI 2016...
+Reading in data for NS 2016...
+Reading in data for NB 2016...
+Reading in data for NL 2016...
+Reading in data for QC 2016...
+Reading in data for ON 2016...
+Reading in data for MB 2016...
+Reading in data for SK 2016...
+Reading in data for AB 2016...
+Reading in data for BC 2016...
+Reading in data for YK 2016...
+Reading in data for NT 2016...
+Reading in data for NU 2016...
+Concatenating dataframes for 2016...
+Reading in data for PEI 2021...
+Reading in data for NS 2021...
+Reading in data for NB 2021...
+Reading in data for NL 2021...
+Reading in data for QC 2021...
+Reading in data for ON 2021...
+Reading in data for MB 2021...
+Reading in data for SK 2021...
+Reading in data for AB 2021...
+Reading in data for BC 2021...
+Reading in data for YK 2021...
+Reading in data for NT 2021...
+Reading in data for NU 2021...
+Concatenating dataframes for 2021...
+Data assembly took 1.5985462665557861 seconds.
+Loading data for training and analysis...
+Trimmed 2016 data Shape: (4325, 215)
+Trimmed 2021 data Shape: (4325, 3)
+Beginning model training for full dataset...
+Training model...
+Model training complete. Training time: 88.39716219902039 seconds
+Predicting values...
+Prediction complete
+
+Validation RMSE: 5548.3273994453175
+Validation R^2: 0.9584410779067749
+Mean of validation set: 8220
+Validation RMSE as a percentage of the mean: 67.5%
+Model output ready for analysis.
+
+The 10 most important features are:
+
+Population, 2016: 0.01894770750882128
+7 Trades, transport and equipment operators and related occupations: 0.017254753578911684
+One-census-family households: 0.0171324224941311
+15 to 19 years: 0.015270557951175793
+18 to 64 years: 0.01478022263564629
+Total - Marital status for the population aged 15 years and over - 100% data: 0.014269442550663253
+Total - Income statistics in 2015 for economic families in private households - 25% sample data: 0.013644635967197807
+35 to 44 years: 0.013052997866434957
+In the third decile: 0.012855885192893381
+In the second decile: 0.012564089020801195
+
+Starting hyperparameter tuning...
+
+Fitting 5 folds for each of 35 candidates, totalling 175 fits
+
+Hyperparameter tuning complete. Time taken: 2053.0807609558105 seconds
+
+Best parameters: {'regressor__min_samples_leaf': 1, 'regressor__n_estimators': 500}
+Best score: 0.9042091974046098
+
+Retraining full dataset model with best parameters...
+Training model...
+Model training complete. Training time: 220.94459104537964 seconds
+Predicting values...
+Prediction complete
+
+Validation RMSE: 5400.422579010169
+Validation R^2: 0.9606272632644921
+Mean of validation set: 8220
+Validation RMSE as a percentage of the mean: 65.7%
+
+The 10 most important features are:
+
+7 Trades, transport and equipment operators and related occupations: 0.016250017861243044
+In the second decile: 0.014849557486690201
+30 to 34 years: 0.014448935035536233
+55 to 59 years: 0.013397658641193721
+Total - Marital status for the population aged 15 years and over - 100% data: 0.012704604081878351
+6 Sales and service occupations: 0.01219316313373256
+Total - Employment income statistics for the population aged 15 years and over in private households - 25% sample data: 0.01149423515619257
+Total - Major field of study - Classification of Instructional Programs (CIP) 2016 for the population aged 25 to 64 years in private households - 25% sample data: 0.010938914302514867
+One-census-family households: 0.01078067794477675
+18 to 64 years: 0.010440798938350752
+Exporting tuned model for full dataset...
+Below 100k 2016 dataset length: 4274
+Below 100k 2021 dataset length: 4274
+Training model for populations below 100k...
+Training model...
+Model training complete. Training time: 189.22974801063538 seconds
+Predicting values...
+Prediction complete
+
+Validation RMSE: 2830.4821082602393
+Validation R^2: 0.8968194803726366
+Mean of validation set: 3528
+Validation RMSE as a percentage of the mean: 80.23%
+
+Starting hyperparameter tuning...
+
+Fitting 5 folds for each of 35 candidates, totalling 175 fits
+
+Hyperparameter tuning complete. Time taken: 1552.2113268375397 seconds
+
+Best parameters: {'regressor__min_samples_leaf': 1, 'regressor__n_estimators': 100}
+Best score: 0.9409477910959364
+
+Retraining model with best parameters...
+Training model...
+Model training complete. Training time: 37.917168855667114 seconds
+Predicting values...
+Prediction complete
+
+Validation RMSE: 3014.2317641175637
+Validation R^2: 0.8829880634606291
+Mean of validation set: 3528
+Validation RMSE as a percentage of the mean: 85.44%
+
+The 10 most important features are:
+
+15 to 64 years: 0.10599971823105322
+Number of employment income recipients aged 15 years and over in private households - 25% sample data: 0.059045043120533956
+7 Trades, transport and equipment operators and related occupations: 0.037646982827675333
+Population, 2016: 0.03000082208524387
+Number of persons in private households: 0.028741071499484412
+Number of employment income recipients aged 15 years and over in private households - 100% data: 0.02856597632463761
+Total - Citizenship for the population in private households - 25% sample data: 0.028531067188998255
+18 to 64 years: 0.02351172630983462
+Total - Highest certificate, diploma or degree for the population aged 25 to 64 years in private households - 25% sample data: 0.022505190405321843
+6 Sales and service occupations: 0.022428703620657714
+Exporting tuned model for below 100k dataset...
+Below 30k 2016 dataset length: 4177
+Below 30k 2021 dataset length: 4177
+Training model for populations below 30k...
+Training model...
+Model training complete. Training time: 171.61298251152039 seconds
+Predicting values...
+Prediction complete
+
+Validation RMSE: 990.4902948971612
+Validation R^2: 0.9415578739576415
+Mean of validation set: 2254
+Validation RMSE as a percentage of the mean: 43.93%
+
+Starting hyperparameter tuning...
+
+Fitting 5 folds for each of 35 candidates, totalling 175 fits
+
+Hyperparameter tuning complete. Time taken: 1355.1297271251678 seconds
+
+Best parameters: {'regressor__min_samples_leaf': 2, 'regressor__n_estimators': 25}
+Best score: 0.9623204083744378
+
+Retraining model with best parameters...
+Training model...
+Model training complete. Training time: 7.2440736293792725 seconds
+Predicting values...
+Prediction complete
+
+Validation RMSE: 1042.8971851026588
+Validation R^2: 0.9352099152609942
+Mean of validation set: 2254
+Validation RMSE as a percentage of the mean: 46.26%
+
+The 10 most important features are:
+
+Number of market income recipients aged 15 years and over in private households - 100% data: 0.15186269680830217
+Total - Income statistics in 2015 for two-or-more-person private households - 25% sample data: 0.0879586638779368
+Total - Mother tongue for the total population excluding institutional residents - 100% data: 0.08771002368012343
+Population, 2016: 0.07827795927404943
+Total - Age groups and average age of the population - 100% data: 0.06929346148989525
+Total - Language spoken most often at home for the total population excluding institutional residents - 100% data: 0.060318715149356744
+Total - Mobility status 5 years ago - 25% sample data: 0.05748062779101529
+Total - Marital status for the population aged 15 years and over - 100% data: 0.05435391615526917
+Total - Other language(s) spoken regularly at home for the total population excluding institutional residents - 100% data: 0.03420778896196249
+Number of market income recipients aged 15 years and over in private households - 25% sample data: 0.0339961994690602
+Exporting tuned model for below 30k dataset...

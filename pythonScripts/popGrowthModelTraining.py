@@ -179,7 +179,6 @@ trimmed2021 = trimmed2021.sort_values(by='GEO_NAME')
 # the communities in the 2016 data. Note that community name is 'GEO_NAME' in both datasets.
 # We will need to use a merge rather than a simple isin() because we need to match across multiple columns
 trimmed2021 = trimmed2021.merge(census2016[['GEO_NAME', 'Province']], on=['GEO_NAME', 'Province'], how='inner')
-
 # Now let's trim the 2016 data to only include what has a match in our trimmed 2021 data
 trimmed2016 = census2016.merge(trimmed2021[['GEO_NAME', 'Province']], on=['GEO_NAME', 'Province'], how='inner')
 

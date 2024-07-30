@@ -3,10 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Graphml files
-*.graphml
-
-# StatCan raw data files
+# StatCan raw data files - too large for GH
 *statCanData/
 
 # C extensions

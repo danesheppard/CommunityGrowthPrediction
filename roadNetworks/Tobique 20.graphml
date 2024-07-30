@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d14" for="edge" attr.name="ref" attr.type="string"/>
+<key id="d13" for="edge" attr.name="geometry" attr.type="string"/>
+<key id="d12" for="edge" attr.name="length" attr.type="string"/>
+<key id="d11" for="edge" attr.name="reversed" attr.type="string"/>
+<key id="d10" for="edge" attr.name="oneway" attr.type="string"/>
+<key id="d9" for="edge" attr.name="highway" attr.type="string"/>
+<key id="d8" for="edge" attr.name="lanes" attr.type="string"/>
+<key id="d7" for="edge" attr.name="osmid" attr.type="string"/>
+<key id="d6" for="node" attr.name="street_count" attr.type="string"/>
+<key id="d5" for="node" attr.name="x" attr.type="string"/>
+<key id="d4" for="node" attr.name="y" attr.type="string"/>
+<key id="d3" for="graph" attr.name="simplified" attr.type="string"/>
+<key id="d2" for="graph" attr.name="crs" attr.type="string"/>
+<key id="d1" for="graph" attr.name="created_with" attr.type="string"/>
+<key id="d0" for="graph" attr.name="created_date" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">2024-07-01 16:25:47</data>
+<data key="d1">OSMnx 1.9.3</data>
+<data key="d2">epsg:4326</data>
+<data key="d3">True</data>
+<node id="1645143441">
+  <data key="d4">46.7680308</data>
+  <data key="d5">-67.6962368</data>
+  <data key="d6">3</data>
+</node>
+<node id="1645143538">
+  <data key="d4">46.7691437</data>
+  <data key="d5">-67.6959742</data>
+  <data key="d6">3</data>
+</node>
+<edge source="1645143441" target="1645143538" id="0">
+  <data key="d7">151674185</data>
+  <data key="d8">1</data>
+  <data key="d9">unclassified</data>
+  <data key="d10">False</data>
+  <data key="d11">False</data>
+  <data key="d12">184.42899999999997</data>
+  <data key="d13">LINESTRING (-67.6962368 46.7680308, -67.6964991 46.7680158, -67.696679 46.7681618, -67.6968121 46.7686133, -67.6965992 46.7687549, -67.6963303 46.7690398, -67.696118 46.7691543, -67.6959742 46.7691437)</data>
+</edge>
+<edge source="1645143441" target="1645143538" id="1">
+  <data key="d7">151674659</data>
+  <data key="d8">2</data>
+  <data key="d14">NB 105</data>
+  <data key="d9">primary</data>
+  <data key="d10">False</data>
+  <data key="d11">False</data>
+  <data key="d12">125.38799999999999</data>
+  <data key="d13">LINESTRING (-67.6962368 46.7680308, -67.6962209 46.7681476, -67.6959742 46.7691437)</data>
+</edge>
+<edge source="1645143538" target="1645143441" id="0">
+  <data key="d7">151674185</data>
+  <data key="d8">1</data>
+  <data key="d9">unclassified</data>
+  <data key="d10">False</data>
+  <data key="d11">True</data>
+  <data key="d12">184.429</data>
+  <data key="d13">LINESTRING (-67.6959742 46.7691437, -67.696118 46.7691543, -67.6963303 46.7690398, -67.6965992 46.7687549, -67.6968121 46.7686133, -67.696679 46.7681618, -67.6964991 46.7680158, -67.6962368 46.7680308)</data>
+</edge>
+<edge source="1645143538" target="1645143441" id="1">
+  <data key="d7">151674659</data>
+  <data key="d8">2</data>
+  <data key="d14">NB 105</data>
+  <data key="d9">primary</data>
+  <data key="d10">False</data>
+  <data key="d11">True</data>
+  <data key="d12">125.38799999999999</data>
+  <data key="d13">LINESTRING (-67.6959742 46.7691437, -67.6962209 46.7681476, -67.6962368 46.7680308)</data>
+</edge>
+</graph></graphml>

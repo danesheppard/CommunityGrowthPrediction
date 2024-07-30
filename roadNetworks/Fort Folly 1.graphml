@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d15" for="edge" attr.name="geometry" attr.type="string"/>
+<key id="d14" for="edge" attr.name="name" attr.type="string"/>
+<key id="d13" for="edge" attr.name="length" attr.type="string"/>
+<key id="d12" for="edge" attr.name="reversed" attr.type="string"/>
+<key id="d11" for="edge" attr.name="oneway" attr.type="string"/>
+<key id="d10" for="edge" attr.name="highway" attr.type="string"/>
+<key id="d9" for="edge" attr.name="ref" attr.type="string"/>
+<key id="d8" for="edge" attr.name="lanes" attr.type="string"/>
+<key id="d7" for="edge" attr.name="osmid" attr.type="string"/>
+<key id="d6" for="node" attr.name="street_count" attr.type="string"/>
+<key id="d5" for="node" attr.name="x" attr.type="string"/>
+<key id="d4" for="node" attr.name="y" attr.type="string"/>
+<key id="d3" for="graph" attr.name="simplified" attr.type="string"/>
+<key id="d2" for="graph" attr.name="crs" attr.type="string"/>
+<key id="d1" for="graph" attr.name="created_with" attr.type="string"/>
+<key id="d0" for="graph" attr.name="created_date" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">2024-07-01 16:25:06</data>
+<data key="d1">OSMnx 1.9.3</data>
+<data key="d2">epsg:4326</data>
+<data key="d3">True</data>
+<node id="279742938">
+  <data key="d4">45.8859646</data>
+  <data key="d5">-64.4989789</data>
+  <data key="d6">3</data>
+</node>
+<node id="1622593781">
+  <data key="d4">45.8898896</data>
+  <data key="d5">-64.5058097</data>
+  <data key="d6">3</data>
+</node>
+<node id="1626404032">
+  <data key="d4">45.8889219</data>
+  <data key="d5">-64.4958849</data>
+  <data key="d6">3</data>
+</node>
+<node id="1626404282">
+  <data key="d4">45.889829</data>
+  <data key="d5">-64.494659</data>
+  <data key="d6">3</data>
+</node>
+<node id="1626404714">
+  <data key="d4">45.8916706</data>
+  <data key="d5">-64.4969898</data>
+  <data key="d6">3</data>
+</node>
+<node id="1626404869">
+  <data key="d4">45.8926551</data>
+  <data key="d5">-64.4884575</data>
+  <data key="d6">3</data>
+</node>
+<edge source="279742938" target="1626404032" id="0">
+  <data key="d7">[149695883, 149258695]</data>
+  <data key="d8">2</data>
+  <data key="d9">NB 106</data>
+  <data key="d10">['primary', 'unclassified']</data>
+  <data key="d11">False</data>
+  <data key="d12">False</data>
+  <data key="d13">806.9240000000001</data>
+  <data key="d14">Swift Lane</data>
+  <data key="d15">LINESTRING (-64.4989789 45.8859646, -64.498009 45.8855882, -64.4960866 45.884914, -64.4958726 45.8851058, -64.4954703 45.8854801, -64.4955643 45.8856229, -64.496049 45.8859135, -64.4960154 45.886103, -64.4956067 45.8867204, -64.4947022 45.8875963, -64.4945794 45.8878229, -64.4945959 45.8879577, -64.4948773 45.888359, -64.4958849 45.8889219)</data>
+</edge>
+<edge source="279742938" target="1626404032" id="1">
+  <data key="d7">149695845</data>
+  <data key="d8">2</data>
+  <data key="d14">Cherry Burton Road</data>
+  <data key="d10">unclassified</data>
+  <data key="d11">False</data>
+  <data key="d12">False</data>
+  <data key="d13">406.93399999999997</data>
+  <data key="d15">LINESTRING (-64.4989789 45.8859646, -64.498826 45.8861382, -64.4977339 45.8872235, -64.4958849 45.8889219)</data>
+</edge>
+<edge source="279742938" target="1622593781" id="0">
+  <data key="d7">149258695</data>
+  <data key="d8">2</data>
+  <data key="d9">NB 106</data>
+  <data key="d10">primary</data>
+  <data key="d11">False</data>
+  <data key="d12">True</data>
+  <data key="d13">686.783</data>
+  <data key="d15">LINESTRING (-64.4989789 45.8859646, -64.5 45.8863989, -64.5006858 45.8867618, -64.5058097 45.8898896)</data>
+</edge>
+<edge source="1622593781" target="1626404714" id="0">
+  <data key="d7">149256640</data>
+  <data key="d8">2</data>
+  <data key="d14">Bernard Trail</data>
+  <data key="d10">unclassified</data>
+  <data key="d11">False</data>
+  <data key="d12">False</data>
+  <data key="d13">816.1279999999999</data>
+  <data key="d15">LINESTRING (-64.5058097 45.8898896, -64.5056444 45.8899728, -64.5053483 45.8899857, -64.5047208 45.8896609, -64.5042876 45.8893696, -64.5039616 45.8892299, -64.5035739 45.88919, -64.5030211 45.8892423, -64.5026418 45.8895173, -64.5022978 45.8901428, -64.5019958 45.8904168, -64.5 45.890907, -64.4983333 45.891302, -64.4969898 45.8916706)</data>
+</edge>
+<edge source="1622593781" target="279742938" id="0">
+  <data key="d7">149258695</data>
+  <data key="d8">2</data>
+  <data key="d9">NB 106</data>
+  <data key="d10">primary</data>
+  <data key="d11">False</data>
+  <data key="d12">False</data>
+  <data key="d13">686.783</data>
+  <data key="d15">LINESTRING (-64.5058097 45.8898896, -64.5006858 45.8867618, -64.5 45.8863989, -64.4989789 45.8859646)</data>
+</edge>
+<edge source="1626404032" target="1626404282" id="0">
+  <data key="d7">149695845</data>
+  <data key="d8">2</data>
+  <data key="d14">Cherry Burton Road</data>
+  <data key="d10">unclassified</data>
+  <data key="d11">False</data>
+  <data key="d12">False</data>
+  <data key="d13">139.74599999999998</data>
+  <data key="d15">LINESTRING (-64.4958849 45.8889219, -64.4957589 45.8890315, -64.4951803 45.8895612, -64.494659 45.889829)</data>
+</edge>
+<edge source="1626404032" target="279742938" id="0">
+  <data key="d7">149695845</data>
+  <data key="d8">2</data>
+  <data key="d14">Cherry Burton Road</data>
+  <data key="d10">unclassified</data>
+  <data key="d11">False</data>
+  <data key="d12">True</data>
+  <data key="d13">406.93399999999997</data>
+  <data key="d15">LINESTRING (-64.4958849 45.8889219, -64.4977339 45.8872235, -64.498826 45.8861382, -64.4989789 45.8859646)</data>
+</edge>
+<edge source="1626404032" target="279742938" id="1">
+  <data key="d7">[149695883, 149258695]</data>
+  <data key="d8">2</data>
+  <data key="d14">Swift Lane</data>
+  <data key="d10">['primary', 'unclassified']</data>
+  <data key="d11">False</data>
+  <data key="d12">True</data>
+  <data key="d13">806.9240000000001</data>
+  <data key="d9">NB 106</data>
+  <data key="d15">LINESTRING (-64.4958849 45.8889219, -64.4948773 45.888359, -64.4945959 45.8879577, -64.4945794 45.8878229, -64.4947022 45.8875963, -64.4956067 45.8867204, -64.4960154 45.886103, -64.496049 45.8859135, -64.4955643 45.8856229, -64.4954703 45.8854801, -64.4958726 45.8851058, -64.4960866 45.884914, -64.498009 45.8855882, -64.4989789 45.8859646)</data>
+</edge>
+<edge source="1626404282" target="1626404869" id="0">
+  <data key="d7">149695845</data>
+  <data key="d8">2</data>
+  <data key="d14">Cherry Burton Road</data>
+  <data key="d10">unclassified</data>
+  <data key="d11">False</data>
+  <data key="d12">False</data>
+  <data key="d13">577.6419999999999</data>
+  <data key="d15">LINESTRING (-64.494659 45.889829, -64.4944805 45.8899033, -64.4933539 45.8901881, -64.4922832 45.8906341, -64.4895734 45.8919655, -64.4884575 45.8926551)</data>
+</edge>
+<edge source="1626404282" target="1626404032" id="0">
+  <data key="d7">149695845</data>
+  <data key="d8">2</data>
+  <data key="d14">Cherry Burton Road</data>
+  <data key="d10">unclassified</data>
+  <data key="d11">False</data>
+  <data key="d12">True</data>
+  <data key="d13">139.746</data>
+  <data key="d15">LINESTRING (-64.494659 45.889829, -64.4951803 45.8895612, -64.4957589 45.8890315, -64.4958849 45.8889219)</data>
+</edge>
+<edge source="1626404282" target="1626404714" id="0">
+  <data key="d7">149695915</data>
+  <data key="d8">2</data>
+  <data key="d10">unclassified</data>
+  <data key="d11">False</data>
+  <data key="d12">False</data>
+  <data key="d13">278.01599999999996</data>
+  <data key="d15">LINESTRING (-64.494659 45.889829, -64.4951811 45.8900742, -64.495835 45.8904256, -64.496151 45.8906735, -64.4969898 45.8916706)</data>
+</edge>
+<edge source="1626404714" target="1626404869" id="0">
+  <data key="d7">149256640</data>
+  <data key="d8">2</data>
+  <data key="d14">Bernard Trail</data>
+  <data key="d10">unclassified</data>
+  <data key="d11">False</data>
+  <data key="d12">False</data>
+  <data key="d13">694.845</data>
+  <data key="d15">LINESTRING (-64.4969898 45.8916706, -64.4967723 45.8917275, -64.4941723 45.8923465, -64.4899001 45.8930954, -64.4894863 45.8930468, -64.4884575 45.8926551)</data>
+</edge>
+<edge source="1626404714" target="1622593781" id="0">
+  <data key="d7">149256640</data>
+  <data key="d8">2</data>
+  <data key="d14">Bernard Trail</data>
+  <data key="d10">unclassified</data>
+  <data key="d11">False</data>
+  <data key="d12">True</data>
+  <data key="d13">816.128</data>
+  <data key="d15">LINESTRING (-64.4969898 45.8916706, -64.4983333 45.891302, -64.5 45.890907, -64.5019958 45.8904168, -64.5022978 45.8901428, -64.5026418 45.8895173, -64.5030211 45.8892423, -64.5035739 45.88919, -64.5039616 45.8892299, -64.5042876 45.8893696, -64.5047208 45.8896609, -64.5053483 45.8899857, -64.5056444 45.8899728, -64.5058097 45.8898896)</data>
+</edge>
+<edge source="1626404714" target="1626404282" id="0">
+  <data key="d7">149695915</data>
+  <data key="d8">2</data>
+  <data key="d10">unclassified</data>
+  <data key="d11">False</data>
+  <data key="d12">True</data>
+  <data key="d13">278.016</data>
+  <data key="d15">LINESTRING (-64.4969898 45.8916706, -64.496151 45.8906735, -64.495835 45.8904256, -64.4951811 45.8900742, -64.494659 45.889829)</data>
+</edge>
+<edge source="1626404869" target="1626404714" id="0">
+  <data key="d7">149256640</data>
+  <data key="d8">2</data>
+  <data key="d14">Bernard Trail</data>
+  <data key="d10">unclassified</data>
+  <data key="d11">False</data>
+  <data key="d12">True</data>
+  <data key="d13">694.8449999999999</data>
+  <data key="d15">LINESTRING (-64.4884575 45.8926551, -64.4894863 45.8930468, -64.4899001 45.8930954, -64.4941723 45.8923465, -64.4967723 45.8917275, -64.4969898 45.8916706)</data>
+</edge>
+<edge source="1626404869" target="1626404282" id="0">
+  <data key="d7">149695845</data>
+  <data key="d8">2</data>
+  <data key="d14">Cherry Burton Road</data>
+  <data key="d10">unclassified</data>
+  <data key="d11">False</data>
+  <data key="d12">True</data>
+  <data key="d13">577.642</data>
+  <data key="d15">LINESTRING (-64.4884575 45.8926551, -64.4895734 45.8919655, -64.4922832 45.8906341, -64.4933539 45.8901881, -64.4944805 45.8899033, -64.494659 45.889829)</data>
+</edge>
+</graph></graphml>
